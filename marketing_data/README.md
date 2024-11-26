@@ -1,5 +1,6 @@
-Marketing campaign data is provided in JSON files, with each file containing:
-
+Marketing campaign data is provided JSON files.\
+The JSON data is new-line delimited\
+Each JSON object contains the following attributes:
 - `campaign_id`
 - `region`
 - `ad_type` (`video`, `banner`, etc.)
