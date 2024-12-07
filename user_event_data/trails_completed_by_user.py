@@ -4,14 +4,13 @@ from datetime import datetime, timedelta
 
 # Count the total number of unique users who completed at least one trail in the last 60 days.
 
-users_per_completed_trail = []
 end_date = datetime.now()
 start_date = end_date - timedelta(days=60)
 
 end_date_str = end_date.strftime("%Y-%m-%d")
 start_date_str = start_date.strftime("%Y-%m-%d")
 
-# Use a set for unique items, plus faster lookup times O(1)
+# Use a set for unique items, faster lookup times O(1)
 unique_users = set()
 
 for file in glob.glob("./user_events_daily_data/*.json"):
